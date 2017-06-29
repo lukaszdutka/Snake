@@ -31,7 +31,7 @@ public class Game extends Canvas implements Runnable {
 
         r = new Random();
 
-        handler.addObject(new Player(r.nextInt(WIDTH/2), r.nextInt(HEIGHT/2), ID.Player, handler, WIDTH, HEIGHT));
+        handler.addObject(new Player(r.nextInt(WIDTH)/16 * 16, r.nextInt(HEIGHT)/16 * 16, ID.Player, handler, WIDTH, HEIGHT));
         handler.addObject(new Point(r.nextInt(WIDTH)/16 * 16, r.nextInt(HEIGHT)/16 * 16, ID.Point, handler));
 
     }
@@ -54,12 +54,14 @@ public class Game extends Canvas implements Runnable {
     public void run() {
         this.requestFocus();
         long lastTime = System.nanoTime();
-        double amountOfTicks = 60.0;
+        double amountOfTicks = 8.0;
         double ns = 1000000000 / amountOfTicks;
         double delta = 0;
         long timer = System.currentTimeMillis();
         int frames = 0;
+
         while (running) {
+
             long now = System.nanoTime();
             delta += (now - lastTime) / ns;
             lastTime = now;
