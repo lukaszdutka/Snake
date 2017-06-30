@@ -31,8 +31,8 @@ public class Game extends Canvas implements Runnable {
 
         r = new Random();
 
-        handler.addObject(new Player(r.nextInt(WIDTH)/16 * 16, r.nextInt(HEIGHT)/16 * 16, ID.Player, handler, WIDTH, HEIGHT));
-        handler.addObject(new Point(r.nextInt(WIDTH)/16 * 16, r.nextInt(HEIGHT)/16 * 16, ID.Point, handler));
+        handler.addObject(new Player(r.nextInt(WIDTH-48)/16 * 16, r.nextInt(HEIGHT-48)/16 * 16, ID.Player, handler));
+        handler.addObject(new Point(r.nextInt(WIDTH-48)/16 * 16, r.nextInt(HEIGHT-48)/16 * 16, ID.Point, handler));
 
     }
 
