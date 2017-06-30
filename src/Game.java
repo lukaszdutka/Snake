@@ -21,6 +21,8 @@ public class Game extends Canvas implements Runnable {
     private Handler handler;
     private HUD hud;
 
+    static boolean gameover;
+
     public Game() {
         handler = new Handler();
         this.addKeyListener(new KeyInput(handler));
@@ -34,6 +36,7 @@ public class Game extends Canvas implements Runnable {
         handler.addObject(new Player(r.nextInt(WIDTH-48)/16 * 16, r.nextInt(HEIGHT-48)/16 * 16, ID.Player, handler));
         handler.addObject(new Point(r.nextInt(WIDTH-48)/16 * 16, r.nextInt(HEIGHT-48)/16 * 16, ID.Point, handler));
 
+        gameover = false;
     }
 
     public synchronized void start() {
