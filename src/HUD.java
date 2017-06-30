@@ -16,7 +16,7 @@ public class HUD {
     }
 
     public void render(Graphics g){
-        g.setColor(Color.WHITE);
+        g.setColor(Color.BLACK);
         if(!Game.gameover) {
             g.drawString("Points: " + POINTS, 15, 15);
         }

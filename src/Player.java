@@ -60,7 +60,8 @@ public class Player extends GameObject {
     }
 
     public void render(Graphics g) {
-        g.setColor(Color.white);
+        g.setColor(Color.BLACK);
+        g.drawRect(x, y, widthOfPlayer, heightOfPlayer);
         g.fillRect(x, y, widthOfPlayer, heightOfPlayer);
     }
 

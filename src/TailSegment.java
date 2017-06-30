@@ -30,7 +30,7 @@ public class TailSegment extends GameObject{
 
     @Override
     public void render(Graphics g) {
-        g.setColor(Color.white);
+        g.setColor(Color.BLACK);
         g.drawRect(x, y, widthOfTail, heightOfTail);
     }
 
